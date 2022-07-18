@@ -1,0 +1,113 @@
+doctype html
+html(lang='en')
+  head
+    style
+      include ../static/style.css
+      include ../static/resp.css
+    block scripts
+      script(defer src="../static/resp.js")
+  body
+    nav.navbar.background-navbar.h-nav-resp
+      ul.nav-list.v-nav-resp
+        div.logo
+          a
+            img(onclick="window.location.href='index.pug'", src='../static/Images/logo.jpg', alt='Logo')
+        li
+          a.list-items(href='#home') Home
+        li
+          a.list-items-1(href='#services') Services
+        li
+          a.list-items-2(href='#contact') Contact
+        li
+          a.list-items-3(href='#about') About
+      div.rightNav.v-nav-resp
+        input#search(type='text', name='search', placeholder='Search here')
+        button.btn.btn-sm Search
+      div.burger
+        div.line
+        div.line
+        div.line
+    section#home.background.firstSection
+      div.box-main
+        div.firstHalf
+          p.text-big The future of education is here.
+          p.text-small
+            | In this world of 7 billion people we need to educate all of them.The world will
+            | become a better place to live if each and every person will have access to education.This is the
+            | future of educated world.We are proud to say that the future of education is here.
+          .buttons
+            button.btn Suscribe
+            button.btn Watch Video
+        div.secondHalf
+          img(src='../static/Images/logo1.jpg', alt='Photo loading...')
+    div#services.headings-section.background-navbar
+      h1.text-center.text-big.bold Our Services
+    section.section
+      div#first.parag
+        p.secTag.text-big The End of your search is here
+        p.secSubTag.text-small
+          | Due to accelerated climate change the fragility of Earth is becoming
+          | more apparent. Inequalities, social fragmentation, and political extremism are bringing many
+          | societies to a point of crisis. Advances in Digital Communication, artificial intelligence, and
+          | biotechnology have potential but raise ethical and governance concerns, especially as innovation and
+          | technological change have an uneven record of contributing to human development.The Futures of
+          | Education aims to re-imagine how knowledge and learning can shape the future of humanity and the
+          | planet, given the challenges which they are currently facing.Education plays a role in the
+          | socialising process to build equitable and sustainable societies. School curricula that include
+          | philosophy, human rights, visual learning, socio-emotional competencies, media literacy and the
+          | humanities are said to be key to inclusivity and social justice.
+      div.thumbnail
+        img.imgFluid(src='https://source.unsplash.com/900x900/?education,phycology,coding,laptop', alt='Laptop image')
+    section.section.leftSec
+      .parag
+        p.secTag.text-big Science, technology and innovation
+        p.secSubTag.text-small
+          | With artificial intelligence, technology is increasingly involved in
+          | education. New digital competencies and media literacies call for a gender transformative approach
+          | promoting gender equality, sharing control of resources and decision-making, and women&apos;s empowerment in
+          | digitization and use of artificial intelligence (AI).Unlocking digital barriers through open educational
+          | resources enables global online learning and facilitate Education For All.Media and communication
+          | students would require ethics courses to establish their critical thinking skills and training. This is
+          | seen as being crucial in a &lsquo;fake news&rsquo; era when trust in media professionals is being eroded, especially
+          | when news and documentary production is impacted by the capacity of artificial intelligence to
+          | manufacture authentic-looking &lsquo;fake&rsquo; material.
+      .thumbnail
+        img.imgFluid(src='https://source.unsplash.com/900x900/?technology,science,innovation,education,html,javascript', alt='Laptop image')
+        // </div>
+    section.section
+      .parag
+        p.secTag.text-big Culture and the environment
+        p.secSubTag.text-small
+          | The stability of the planet could be assisted through the mobilization
+          | of education, and the diversification of knowledge, customs and culture.Research suggests that
+          | embedding a deep attachment to landscapes and tangible heritage instils a sense of care for the
+          | world, and that the study, preservation and appreciation of diverse languages, knowledge and customs
+          | enrich human collective consciousness through an understanding of the relations between past,
+          | present and future societies.Education plays a role by including sustainability studies as a means
+          | of promoting planetary survival. Earth science and environment studies enable learners and
+          | communities to become more cognizant of the world they inhabit and leave behind them.A &lsquo;community of
+          | knowledge&rsquo; is one in which the responsibility of being a &lsquo;knowledge keeper&rsquo; is for everyone.This
+          | paradigm shifts the focus from the perspective of &lsquo;stakeholder&rsquo; and changes the way of contributing
+          | to knowledge, aiming to achieve sustainable development.
+      .thumbnail
+        img.imgFluid(src='https://source.unsplash.com/900x900/?study,coding,programming,computer', alt='Laptop image')
+    #services.headings-section.background-navbar
+      h1.text-center.text-big.bold Contact Us
+    section#contact.contact
+      form.contact-form(action='/contact', method='POST')
+        label
+          | Name:
+          input#name.form-input(type='text', name='name', placeholder='Enter your name')
+        label
+          | Number:
+          input#phone.form-input(type='text', name='phone', placeholder='Enter your mobile number')
+        label
+          | Email:
+          input#email.form-input(type='email', name='email', placeholder='Enter your email')
+        // <input class="form-input" type="date" name="birthdate" id="birthdate" placeholder="Enter your birth date">
+        label
+          | Concerns:
+          textarea#text.form-input(name='text', cols='30', rows='8', placeholder='Ellaborate your concern')
+        button.btn.form-btn(type='submit') Submit
+    footer#about.background
+      | Copyright &copy;2022 www.iEducation.com - All right reserved
